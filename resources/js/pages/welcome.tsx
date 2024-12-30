@@ -2,6 +2,7 @@ import React from 'react'
 import { useTranslation } from 'react-i18next';
 
 import { Head } from '@inertiajs/react';
+import { Button } from '@/components/ui/button';
 
 
 const Welcome = React.memo(() => {
