@@ -1,9 +1,9 @@
 import { Head } from '@inertiajs/react'
 
-export default function Home() {
+export default function Welcome() {
   return (
     <>
-      <Head title="Homepage" />
+      <Head title="Expense Manager" />
 
       <div className="fixed xl:absolute left-8 right-8 top-0 bottom-0 xl:inset-0 max-w-screen-xl mx-auto before:content-[''] before:[background:repeating-linear-gradient(0deg,var(--sand-5)_0_4px,transparent_0_8px)] before:absolute before:top-0 before:left-0 before:h-full before:w-px after:content-[''] after:[background:repeating-linear-gradient(0deg,var(--sand-5)_0_4px,transparent_0_8px)] after:absolute after:top-0 after:right-0 after:h-full after:w-px"></div>
 
@@ -338,7 +338,7 @@ export default function Home() {
 
         <div className="text-sm text-center [&>code]:font-medium [&>code]:text-[#a599ff] bg-sand-12 text-sand-1 fixed bottom-0 left-0 right-0 py-2">
           Route for this page is registered in <code>start/routes.ts</code> file, rendering{' '}
-          <code>inertia/pages/home.tsx</code> template
+          <code>resources/js/pages/welcome.tsx</code> template
         </div>
       </div>
     </>
