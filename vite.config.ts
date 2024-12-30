@@ -1,15 +1,15 @@
-import { defineConfig } from 'vite'
-import { getDirname } from '@adonisjs/core/helpers'
-import inertia from '@adonisjs/inertia/client'
-import react from '@vitejs/plugin-react'
-import adonisjs from '@adonisjs/vite/client'
+import { defineConfig } from 'vite';
+import { getDirname } from '@adonisjs/core/helpers';
+import inertia from '@adonisjs/inertia/client';
+import react from '@vitejs/plugin-react';
+import adonisjs from '@adonisjs/vite/client';
 
 export default defineConfig({
   plugins: [
     inertia({ ssr: { enabled: false } }),
     react(),
     adonisjs({
-      entrypoints: ['resources/css/app.css', 'resources/app/app.tsx'],
+      entrypoints: ['resources/css/app.css', 'resources/js/main.tsx'],
       reload: ['resources/views/**/*.edge'],
     }),
   ],
@@ -23,4 +23,4 @@ export default defineConfig({
       '~/': `${getDirname(import.meta.url)}/resources/`,
     },
   },
-})
+});
