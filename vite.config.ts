@@ -1,8 +1,8 @@
-import { defineConfig } from 'vite';
-import { getDirname } from '@adonisjs/core/helpers';
-import inertia from '@adonisjs/inertia/client';
-import react from '@vitejs/plugin-react';
-import adonisjs from '@adonisjs/vite/client';
+import { defineConfig } from 'vite'
+import { getDirname } from '@adonisjs/core/helpers'
+import inertia from '@adonisjs/inertia/client'
+import react from '@vitejs/plugin-react'
+import adonisjs from '@adonisjs/vite/client'
 
 export default defineConfig({
   plugins: [
@@ -24,4 +24,4 @@ export default defineConfig({
       '@': `${getDirname(import.meta.url)}/resources/js/`,
     },
   },
-});
+})

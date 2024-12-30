@@ -1,12 +1,21 @@
 import React from 'react'
-import { useTranslation } from 'react-i18next';
+import { Github } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
-import { Head } from '@inertiajs/react';
-import { Button } from '@/components/ui/button';
-
+import { Head } from '@inertiajs/react'
+import { Button } from '@/components/ui/button'
 
 const Welcome = React.memo(() => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('common')
+  const user = null
+
+  const handleStart = () => {
+    if (user) {
+      // navigate(APP_ROUTE);
+    } else {
+      // navigate(LOGIN_ROUTE);
+    }
+  }
 
   return (
     <div className="flex min-h-screen w-full flex-col bg-muted/40">
@@ -17,11 +26,33 @@ const Welcome = React.memo(() => {
             {t('welcome.app-name')}
           </h1>
           <p className="mt-2 px-6 sm:px-2">{t('welcome.app-description')}</p>
+          <div className="mt-8 flex justify-center">
+            {user ? (
+              <Button variant="default" asChild>
+                <a href="todo">{t('welcome.dashboard')}</a>
+              </Button>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                <Button variant="default">{t('welcome.login')}</Button>
+                <Button variant="destructive" onClick={handleStart}>
+                  {t('welcome.get-started')}
+                </Button>
+                <a
+                  href="https://github.com/wsameer/budget-tracker"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Button variant="outline">
+                    <Github className="mr-2 h-4 w-4" /> {t('welcome.github-repo')}
+                  </Button>
+                </a>
+              </div>
+            )}
+          </div>
         </div>
       </main>
     </div>
   )
-});
+})
 
-export default Welcome;
-
+export default Welcome

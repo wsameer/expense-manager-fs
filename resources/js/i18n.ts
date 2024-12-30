@@ -1,10 +1,10 @@
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
+import i18n from 'i18next'
+import { initReactI18next } from 'react-i18next'
 
 // import Backend from 'i18next-http-backend';
-import LanguageDetector from 'i18next-browser-languagedetector';
+import LanguageDetector from 'i18next-browser-languagedetector'
 
-import common from '../locales/en/common.json';
+import common from '../locales/en/common.json'
 // import auth from '../locales/en/auth.json';
 // import account from '../locales/en/account.json';
 // import categories from '../locales/en/categories.json';
@@ -20,7 +20,7 @@ export const resources = {
     // transaction,
     // settings,
   },
-} as const;
+} as const
 
 i18n
   // .use(Backend)
@@ -37,4 +37,4 @@ i18n
     // },
     resources,
     defaultNS: 'common',
-  });
+  })
