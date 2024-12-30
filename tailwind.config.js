@@ -3,7 +3,7 @@ import defaultTheme from 'tailwindcss/defaultTheme';
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: 'class',
-  content: ['./resources/**/*.{tsx,jsx,ts,js}', './resources/views/**/*.edge'],
+  content: ['./resources/**/*.{tsx,ts}', './resources/views/**/*.edge'],
   theme: {
     container: {
       center: true,
@@ -58,5 +58,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 }
