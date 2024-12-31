@@ -3,6 +3,7 @@
   "compilerOptions": {
     "rootDir": "./",
     "outDir": "./build",
+    "jsx": "react-jsx",
     "paths": {
       "#controllers/*": ["./app/controllers/*.js"],
       "#exceptions/*": ["./app/exceptions/*.js"],
@@ -23,6 +24,5 @@
       "@/*": ["./resources/js/*"]
     }
   },
-  "include": ["resources/js/**/*.ts", "resources/js/**/*.tsx", "resources/js/**/*.d.ts"],
-  "exclude": ["node_modules", "build"]
+  "exclude": ["./resources/**/*", "node_modules", "build"]
 }

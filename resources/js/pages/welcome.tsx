@@ -2,7 +2,7 @@ import React from 'react'
 import { Github } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 
-import { Head } from '@inertiajs/react'
+import { Head, Link, router } from '@inertiajs/react'
 import { Button } from '@/components/ui/button'
 
 const Welcome = React.memo(() => {
@@ -13,7 +13,11 @@ const Welcome = React.memo(() => {
     if (user) {
       // navigate(APP_ROUTE);
     } else {
-      // navigate(LOGIN_ROUTE);
+      router.visit('/auth/register', {
+        method: 'get',
+        preserveScroll: true,
+        preserveState: true,
+      })
     }
   }
 
@@ -33,12 +37,16 @@ const Welcome = React.memo(() => {
               </Button>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-                <Button variant="default">{t('welcome.login')}</Button>
+                <Button variant="default">
+                  <Link href="/auth/login" preserveScroll>
+                    {t('welcome.login')}
+                  </Link>
+                </Button>
                 <Button variant="destructive" onClick={handleStart}>
                   {t('welcome.get-started')}
                 </Button>
                 <a
-                  href="https://github.com/wsameer/budget-tracker"
+                  href="https://github.com/wsameer/expense-manager-fs"
                   target="_blank"
                   rel="noreferrer"
                 >

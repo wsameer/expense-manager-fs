@@ -5,7 +5,7 @@ import { initReactI18next } from 'react-i18next'
 import LanguageDetector from 'i18next-browser-languagedetector'
 
 import common from '../locales/en/common.json'
-// import auth from '../locales/en/auth.json';
+import auth from '../locales/en/auth.json'
 // import account from '../locales/en/account.json';
 // import categories from '../locales/en/categories.json';
 // import transaction from '../locales/en/transaction.json';
@@ -14,7 +14,7 @@ import common from '../locales/en/common.json'
 export const resources = {
   en: {
     common,
-    // auth,
+    auth,
     // account,
     // categories,
     // transaction,

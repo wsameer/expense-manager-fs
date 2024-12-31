@@ -16,8 +16,8 @@
     "operation-failed": "Operation failed"
   },
   "welcome": {
-    "title": "Budget Tracker by Sameer",
-    "app-name": "Budget Tracker",
+    "title": "Expense Manager by Sameer",
+    "app-name": "Expense Manager",
     "app-description": "Manage your daily expenses and keep track of your budget",
     "get-started": "Get Started",
     "login": "Log In",
